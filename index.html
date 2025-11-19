@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashish Patel - Portfolio</title>
+
+    <style>
+
+        /* ------------ NEW BACKGROUND (Skyblue + Dark Blue) ------------ */
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom right, skyblue, #0b1a55);
+            background-attachment: fixed;
+            color: white;
+            line-height: 1.6;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* ------------ GLOBAL ANIMATIONS ------------ */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* ------------ HEADER ------------ */
+        header {
+            padding: 40px 20px;
+            text-align: left;
+            animation: slideDown 1.4s ease;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #c3f7ff;
+        }
+
+        /* ------------ HOME PAGE CENTER IMAGE ------------ */
+        .home-photo {
+            text-align: right;
+            margin: 20px 0 30px;
+            animation: zoomIn 1.8s ease;
+        }
+
+        .home-photo img {
+            width: 260px;
+            height: 260px;
+            
+            border: 5px solid #ffffffbb;
+            object-fit: cover;
+            box-shadow: 0 0 25px #00000077;
+        }
+
+        /* ------------ NAVIGATION ------------ */
+        nav {
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(8px);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            text-align: center;
+            animation: fadeIn 2s ease;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 15px 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.4s;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+            border-radius: 5px;
+        }
+
+        /* ------------ CONTAINER ------------ */
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* ------------ SECTIONS ------------ */
+        section {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #ffffff66;
+            padding-bottom: 10px;
+            color: #cfffe8;
+        }
+
+        /* ------------ ABOUT SECTION ------------ */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .about-details {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255,255,255,0.15);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* ------------ PORTFOLIO ------------ */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #00000055;
+            transition: 0.4s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 20px #00000077;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .portfolio-content {
+            padding: 15px;
+        }
+
+        /* ------------ CONTACT ------------ */
+        #contact li {
+            margin-bottom: 10px;
+            list-style: none;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #e2e2e2;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kashish patel</h1>
+        <p>Full Stack Developer & Mehndi Artist</p>
+    </header>
+
+    <!-- HOME PAGE IMAGE SPACE -->
+    <div class="home-photo">
+        <img src="your_photo_here.jpg" alt="Profile Photo">
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- ABOUT ME -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+
+                <div class="about-text">
+                    <p>I am a Full Stack Developer who enjoys building useful and clean websites and applications. I work on both the front-end (what users see) and the back-end (how everything works).</p>
+
+                    <p>Along with coding, I am also a Mehndi Artist. I enjoy creating beautiful mehndi patterns for different occasions. My creativity helps me think differently and solve problems in unique ways.</p>
+                </div>
+
+                <div class="about-details">
+                    <ul>
+                        <li><strong>Study:</strong> B.Sc. Computer Science</li>
+                        <li><strong>Hobbies:</strong> Cooking, Reading</li>
+                        <li><strong>Location:</strong> Sachidanan Society, Petlad</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+
+            <h3>Full Stack Projects</h3>
+            <div class="portfolio-grid">
+
+                <div class="portfolio-item">
+                    <img src=".git/image/e-commerc.jpg" alt="">
+                    <div class="portfolio-content">
+                        <h3>E-commerce Site</h3>
+                        <p>A MERN-based shopping website.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src=".git/image/Task Manager API.png" alt="">
+                    <div class="portfolio-content">
+                        <h3>Task Manager API</h3>
+                        <p>A Django + PostgreSQL task management API.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 style="margin-top: 40px;">Mehndi Art</h3>
+            <div class="portfolio-grid">
+
+                <div class="portfolio-item">
+                    <img src=".git/image/Bridal Design.jpg" alt="">
+                    <div class="portfolio-content">
+                        <h3>Bridal Design</h3>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src=".git/image/Arabic mehandi.jpg" alt="">
+                    <div class="portfolio-content">
+                        <h3>Arabic Style</h3>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src=".git/image/Modern Minimalist.jpg" alt="">
+                    <div class="portfolio-content">
+                        <h3>Modern Minimalist</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <ul>
+                <li><strong>Email:</strong> kasispatel0@gmail.com</li>
+                <li><strong>Phone:</strong> +91 7861805711</li>
+                <li><strong>Address:</strong> Sachidanan Society, Petlad</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Kashish Kumari Mahesh bhai Patel. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
